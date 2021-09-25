@@ -6,6 +6,12 @@ import java.util.Scanner;
 
 
 
+
+
+
+
+
+
 public class Main {
 
 	public static void main(String[] args) {
@@ -14,7 +20,9 @@ public class Main {
 		Scanner lector = new Scanner(System.in);
 		Scanner teclado = new Scanner(System.in);
 		int opcion = 0;
+		boolean resultado = false;
 		List<Poliza> ListPoliza = new ArrayList<Poliza>();
+		
 		do {
 
 			System.out.println("#################################\r\n" + "ASEGURADORA DEL SUR, elija una opción:\r\n"
@@ -85,11 +93,34 @@ public class Main {
 				break;
 
 			case 2:
-				System.out.println("");
+				System.out.println("Ingrese se ingrese el Código de Póliza");
+				int bcodigoPoliza = lector.nextInt();
+				for (int i = 0 ; i < ListPoliza.size(); i++) {
+
+					Poliza poliza = ListPoliza.get(i);
+					System.out.println(poliza);
+				
+				Poliza compararPoliza = ListPoliza.get(0);
+				
+			  resultado = bcodigoPoliza.equals(poliza.getCodigoPoliza());
+			  System.out.println(poliza);
+				}
+				
+				
+				
+				
+				
+				
 				break;
 			case 3:
 				break;
-			case 4:
+			case 4:System.out.println("Reporte");
+			for (int i = 0 ; i < ListPoliza.size(); i++) {
+
+				Poliza poliza = ListPoliza.get(i);
+				System.out.println(poliza);
+			}
+			
 				break;
 			case 5:
 				System.out.println("Gracias por su atencion");

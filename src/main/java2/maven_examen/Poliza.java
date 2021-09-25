@@ -74,5 +74,11 @@ public class Poliza {
 	public void setBeneficio(int beneficio) {
 		this.beneficio = beneficio;
 	}
+	@Override
+	public String toString() {
+		return "Poliza [nombre=" + nombre + ", anoVigencia=" + anoVigencia + ", codigoPoliza=" + codigoPoliza
+				+ ", valorPoliza=" + valorPoliza + "]";
+	}
+	
 	
 }
