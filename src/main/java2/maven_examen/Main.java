@@ -21,6 +21,9 @@ public class Main {
 		Scanner teclado = new Scanner(System.in);
 		int opcion = 0;
 		boolean resultado = false;
+		 int bcodigoPoliza  ;
+		 Integer bcodigoPolizaWrappers ;
+		
 		List<Poliza> ListPoliza = new ArrayList<Poliza>();
 		
 		do {
@@ -94,16 +97,17 @@ public class Main {
 
 			case 2:
 				System.out.println("Ingrese se ingrese el Código de Póliza");
-				int bcodigoPoliza = lector.nextInt();
+				 bcodigoPoliza = lector.nextInt();
 				for (int i = 0 ; i < ListPoliza.size(); i++) {
 
 					Poliza poliza = ListPoliza.get(i);
-					System.out.println(poliza);
-				
 				Poliza compararPoliza = ListPoliza.get(0);
 				
-			  resultado = bcodigoPoliza.equals(poliza.getCodigoPoliza());
-			  System.out.println(poliza);
+			 // resultado = bcodigoPolizaWrappers.equals(poliza.getCodigoPoliza());
+			 if (resultado == true) { System.out.println(" Ingrese el nuevo Valor de la Póliza");
+			 int valorPoliza1 = lector.nextInt();
+				 
+			 }
 				}
 				
 				
